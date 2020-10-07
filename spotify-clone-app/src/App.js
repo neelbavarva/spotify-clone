@@ -36,7 +36,7 @@ function App() {
         });
       });
 
-      spotify.getPlaylist(' ')
+      spotify.getPlaylist(' 3:46:42 ')
 
     }
     spotify.getUserPlaylists().then((playlists) => {
