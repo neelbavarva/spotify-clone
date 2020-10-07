@@ -36,6 +36,8 @@ function App() {
         });
       });
 
+      spotify.getPlaylist(' ')
+
     }
     spotify.getUserPlaylists().then((playlists) => {
       dispatch({
