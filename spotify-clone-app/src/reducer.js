@@ -3,6 +3,8 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
+    // REMOVE after development
+    token: 'YOUR_SPOTIFY_ACCESS_TOKEN',
 };
 
 const reducer =(state, action) => {
@@ -14,8 +16,13 @@ const reducer =(state, action) => {
                 ...state,
                 user: action.user,
             };
-            default:
-                return state;
+        case 'SET_TOKEN':
+            return{
+                ...state,
+                token: action.token,
+            };
+        default:
+            return state;
     }
 }
 
