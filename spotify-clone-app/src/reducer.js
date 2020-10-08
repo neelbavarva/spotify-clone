@@ -4,7 +4,7 @@ export const initialState = {
     playing: false,
     item: null,
     // REMOVE after development
-    token: 'YOUR_SPOTIFY_ACCESS_TOKEN',
+    // token: 'YOUR_SPOTIFY_ACCESS_TOKEN',
 };
 
 const reducer =(state, action) => {
@@ -25,6 +25,11 @@ const reducer =(state, action) => {
             return {
                 ...state,
                 playlists:action.playlists,
+            }
+        case 'SET_DISCOVER_WEEKLY' :
+            return {
+                ...state,
+                discover_weekly: action.discover_weekly,
             }
         default:
             return state;
